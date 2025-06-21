@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kstuz</title>
     <link rel="icon" href="favicon.jpg" type="image/jpeg">
-    <meta name="description" content="Официальный сайт лейбла kstuz – независимая музыка, новые релизы и артисты. Погрузитесь в мир экспериментального звучания и андеграундной культуры.">
-    <meta name="keywords" content="kstuz, музыкальный лейбл, андеграунд, экспериментальная музыка, новые релизы, артисты, п.и.в.о, глад валакас, инди, хип-хоп, электронная музыка">
+    <meta name="description" content="Официальный сайт лейбла kstuz – независимая музыка для слушателей и привлекательные условия для артистов: отзывчивость, понимающий персонал, быстрая модерация, 80% роялти, и бесплатное сотрудничество.">
+    <meta name="keywords" content="kstuz, музыкальный лейбл, андеграунд, экспериментальная музыка, новые релизы, артисты, п.и.в.о, глад валакас, инди, хип-хоп, электронная музыка, сотрудничество для музыкантов, помощь артистам, дистрибуция музыки, 80% роялти, бесплатно, метал, бесплатная дистрибуция">
     <link rel="canonical" href="https://kstuz.me">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Literata:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Literata', serif;
-            background: linear-gradient(-45deg, #191919, #010101, #191919, #010101);
+            background: linear-gradient(-45deg, #101010, #050505, #101010, #050505);
             background-size: 400% 400%;
             animation: gradient-animation 15s ease infinite;
-            color: #e0e0e0;
+            color: #f0f0f0;
             overflow-x: hidden;
         }
 
@@ -33,10 +33,10 @@
         }
 
         .album-cover {
-            border-radius: 4px;
+            border-radius: 12px;
         }
         img {
-            border-radius: 4px;
+            border-radius: 12px;
         }
         .text-lowercase {
             text-transform: lowercase;
@@ -59,6 +59,64 @@
             background-repeat: no-repeat;
             opacity: 0.8;
         }
+
+        .toggle-switcher {
+            display: inline-flex;
+            gap: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+        .toggle-link {
+            cursor: pointer;
+            position: relative;
+            padding-bottom: 0.25rem;
+            transition: color 0.2s ease-in-out;
+        }
+        .toggle-link:hover {
+            color: #f0f0f0;
+        }
+        .toggle-link.active {
+            color: #f0f0f0;
+        }
+        .toggle-link.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #f0f0f0;
+        }
+
+        #artists-section {
+            padding: 2rem;
+        }
+        #artists-section ul {
+            max-width: 400px;
+            margin: 0 auto 2rem auto;
+        }
+        #artists-section li {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+        #artists-section li .font-bold {
+            color: #f0f0f0;
+        }
+        a.contact-link {
+            display: inline-block;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            padding: 0.5rem 0;
+            transition: color 0.2s ease-in-out;
+        }
+        a.contact-link:hover {
+            color: #f0f0f0;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="p-4 sm:p-6 md:p-8 flex justify-center items-start min-h-screen">
@@ -69,9 +127,13 @@
             <div class="text-6xl sm:text-7xl md:text-8xl font-light text-gray-100 mb-6 tracking-tight text-lowercase">
                 kstuz
             </div>
+            <div class="flex justify-center toggle-switcher">
+                <span id="listeners-toggle" class="toggle-link active text-lowercase">для слушателей</span>
+                <span id="artists-toggle" class="toggle-link text-lowercase">для артистов</span>
+            </div>
         </header>
 
-        <main class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 justify-items-center">
+        <main id="listeners-section" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 justify-items-center">
             <a href="https://band.link/azov" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
                 <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/50/02/92/500292eb-15fe-77ce-7034-40ca35fe4f9d/859705095640_cover.jpg/500x500bb.jpg" alt="обложка azov" title="azov" class="w-full h-auto">
             </a>
@@ -119,8 +181,25 @@
             </a>
         </main>
 
+        <section id="artists-section" class="hidden text-center max-w-2xl mx-auto py-6">
+            <h2 class="text-3xl sm:text-4xl font-light text-gray-100 mb-6 text-lowercase">
+                для артистов
+            </h2>
+            <ul class="list-none p-0 mb-8 text-gray-300 space-y-4">
+                <li><span class="font-bold text-gray-100 text-lowercase">отзывчивость</span></li>
+                <li><span class="font-bold text-gray-100 text-lowercase">добрый и понимающий персонал</span></li>
+                <li><span class="font-bold text-gray-100 text-lowercase">быстрая модерация</span></li>
+                <li><span class="font-bold text-gray-100 text-lowercase">80% роялти</span></li>
+                <li><span class="font-bold text-gray-100 text-lowercase">бесплатно</span></li>
+            </ul>
+            <a href="https://t.me/zadpr" target="_blank" rel="noopener noreferrer" class="contact-link inline-block text-lowercase">
+                связаться в telegram
+            </a>
+        </section>
+
         <footer class="text-center mt-12 text-gray-500 text-sm text-lowercase">
             <p>telegram: <a href="https://t.me/kstuz" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-200">@kstuz</a></p>
+            <p>youtube: <a href="https://www.youtube.com/@kstuzmusic" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-200">@kstuzmusic</a></p>
         </footer>
     </div>
 
@@ -148,6 +227,30 @@
 
                 starContainer.appendChild(star);
             }
+
+            const listenersToggle = document.getElementById('listeners-toggle');
+            const artistsToggle = document.getElementById('artists-toggle');
+            const listenersSection = document.getElementById('listeners-section');
+            const artistsSection = document.getElementById('artists-section');
+
+            function showListeners() {
+                listenersSection.classList.remove('hidden');
+                artistsSection.classList.add('hidden');
+                listenersToggle.classList.add('active');
+                artistsToggle.classList.remove('active');
+            }
+
+            function showArtists() {
+                artistsSection.classList.remove('hidden');
+                listenersSection.classList.add('hidden');
+                artistsToggle.classList.add('active');
+                listenersToggle.classList.remove('active');
+            }
+
+            listenersToggle.addEventListener('click', showListeners);
+            artistsToggle.addEventListener('click', showArtists);
+
+            showListeners();
         });
     </script>
 </body>
