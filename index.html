@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kstuz</title>
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <meta name="description" content="Официальный сайт лейбла kstuz – независимая музыка, новые релизы и артисты. Погрузитесь в мир экспериментального звучания и андеграундной культуры.">
+    <meta name="keywords" content="kstuz, музыкальный лейбл, андеграунд, экспериментальная музыка, новые релизы, артисты, п.и.в.о, глад валакас, инди, хип-хоп, электронная музыка">
+    <link rel="canonical" href="https://kstuz.me">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Literata', serif;
+            background: linear-gradient(-45deg, #191919, #010101, #191919, #010101);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
 
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .album-cover {
+            border-radius: 4px;
+        }
+        img {
+            border-radius: 4px;
+        }
+        .text-lowercase {
+            text-transform: lowercase;
+        }
+
+        .star-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background-image: url('star.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8 flex justify-center items-start min-h-screen">
+    <div id="star-background" class="star-container"></div>
+
+    <div class="container max-w-4xl w-full relative z-0">
+        <header class="text-center mb-8 sm:mb-12">
+            <div class="text-6xl sm:text-7xl md:text-8xl font-light text-gray-100 mb-6 tracking-tight text-lowercase">
+                kstuz
+            </div>
+        </header>
+
+        <main class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 justify-items-center">
+            <a href="https://band.link/azov" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/50/02/92/500292eb-15fe-77ce-7034-40ca35fe4f9d/859705095640_cover.jpg/500x500bb.jpg" alt="обложка azov" title="azov" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/sosnut" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://music-bandlink.s3.yandex.net/img/bandlinks/Kj2mO_hpguzxGo_370x370.jpeg" alt="обложка sosnut" title="sosnut" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/Y3M3L9I" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/8d/87/60/8d8760dc-411d-354d-f415-57e41fab9cff/199282182235_cover.jpg/316x316bb.webp" alt="обложка yemelya" title="yemelya" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/shampur" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/16/d1/27/16d1278d-2801-58d0-c9f3-825af64d0b8b/196056302653_cover.jpg/500x500bb.jpg" alt="обложка shampur" title="shampur" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/kawo" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/78/88/aa/7888aa38-a5ea-19b1-6169-b54eec728628/859796390310_cover.jpg/500x500bb.jpg" alt="обложка kawo" title="kawo" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/nasral" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b9/15/d3/b915d3e3-95f6-b762-d17c-6cf1375ce9cb/859795004225_cover.jpg/500x500bb.jpg" alt="обложка nasral" title="nasral" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/qlie" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://music-bandlink.s3.yandex.net/img/bandlinks/dTiRm_g5YSnGkS_370x370.jpeg" alt="обложка qlie" title="qlie" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/340am" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ad/ef/b2/adefb2e4-da78-7301-6926-ea165f43899c/859793505489_cover.jpg/500x500bb.jpg" alt="обложка 340 am" title="340 am" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/humiliation" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ba/c1/ae/bac1ae45-1b76-7c01-082d-30a8a2374f89/859792830155_cover.jpg/500x500bb.jpg" alt="обложка humiliation" title="humiliation" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/luntikexe" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b4/fe/1a/b4fe1adc-673f-af29-c1e8-405771f9f8cd/859792412092_cover.jpg/500x500bb.jpg" alt="обложка luntik exe" title="luntik exe" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/warcover" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/cb/8a/fb/cb8afb30-988d-4e16-4fef-056c9afd2ede/859792069678_cover.jpg/500x500bb.jpg" alt="обложка warcover" title="warcover" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/kotsatanist" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2a/80/76/2a807643-4e85-5f72-dad3-c4491e84bbf9/cover.jpg/316x316bb.webp" alt="обложка kotsatonist" title="kotsatonist" class="w-full h-auto">
+            </a>
+            <a href="http://fof.muz.lc/fimoz" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://music-bandlink.s3.yandex.net/img/bandlinks/DfxsC_SIMC8poK_370x370.jpeg" alt="обложка fimoz" title="fimoz" class="w-full h-auto">
+            </a>
+            <a href="https://band.link/fordurov" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/76/2c/2e/762c2ee6-e833-2f19-ef89-eda3b000b11e/859793258521_cover.jpg/500x500bb.jpg" alt="обложка fordurov" title="fordurov" class="w-full h-auto">
+            </a>
+            <a href="https://soundcloud.com/liljyd/pdrilla" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[180px] overflow-hidden album-cover">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/7f/cf/697fcf8d-437c-3c0f-f89d-ba079a21d9ef/859798642431_cover.jpg/500x500bb.jpg" alt="обложка pdorrap" title="pdorrap" class="w-full h-auto">
+            </a>
+        </main>
+
+        <footer class="text-center mt-12 text-gray-500 text-sm text-lowercase">
+            <p>telegram: <a href="https://t.me/kstuz" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-200">@kstuz</a></p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const starContainer = document.getElementById('star-background');
+            const numberOfStars = 200;
+
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 3 + 1;
+                const rotation = Math.random() * 360;
+                const opacity = Math.random() * 0.5 + 0.3;
+
+                star.style.left = `${x}vw`;
+                star.style.top = `${y}vh`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.transform = `rotate(${rotation}deg)`;
+                star.style.opacity = opacity;
+
+                starContainer.appendChild(star);
+            }
+        });
+    </script>
+</body>
+</html>
