@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>баклажаны рвут резинку (feat. денис солодков) - kstuz</title>
     <link rel="icon" href="favicon.jpg" type="image/jpeg">
-    <meta name="description" content="Слушайте Баклажаны рвут резинку (feat. Денис Солодков) - сингл от П.И.В.О на лейбле kstuz. Доступно на всех основных музыкальных площадках: Яндекс Музыка, Deezer, Spotify, МТС Музыка, VK Музыка, Apple Music, iTunes, YouTube Music. Жанр: андеграунд, хип-хоп.">
-    <meta name="keywords" content="баклажаны рвут резинку, денис солодков, п.и.в.о, kstuz, музыкальный лейбл, сингл, андеграунд, хип-хоп, новинка, слушать онлайн, яндекс музыка, spotify, apple music, бесплатная дистрибуция">
-    <link rel="canonical" href="https://kstuz.me/releases/baklazhany-rvut-rezinku">
+    <meta name="description" content="Слушайте Баклажаны рвут резинку (feat. Денис Солодков) - сингл от П.И.В.О на лейбле kstuz. Доступно на Яндекс Музыка, Deezer, Spotify, МТС Музыка, VK Музыка, Apple Music, iTunes, YouTube Music.">
+    <meta name="keywords" content="баклажаны рвут резинку, денис солодков, п.и.в.о, kstuz, музыкальный лейбл, сингл, андеграунд, новинка, слушать онлайн, яндекс музыка, spotify, apple music, легенда танки, метал, вазелиновое дрисло">
+    <link rel="canonical" href="https://kstuz.me/bz">
     <meta property="og:title" content="баклажаны рвут резинку (feat. денис солодков) - kstuz">
     <meta property="og:description" content="Слушайте Баклажаны рвут резинку (feat. Денис Солодков) - сингл от П.И.В.О на лейбле kstuz.">
-    <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/50/02/92/500292eb-15fe-77ce-7034-40ca35fe4f9d/859705095640_cover.jpg/500x500bb.jpg">
-    <meta property="og:url" content="https://kstuz.me/releases/baklazhany-rvut-rezinku">
+    <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/50/02/92/500292eb-15fe-77ce-7034-40ca35fe4f9d/859705095640_cover.jpg/1200x630bb.jpg">
+    <meta property="og:url" content="https://kstuz.me/bz">
     <meta property="og:type" content="music.song">
     <meta property="og:site_name" content="kstuz">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Literata:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <style>
         body {
             font-family: 'Literata', serif;
@@ -89,6 +90,22 @@
             color: #f0f0f0;
             text-decoration: underline;
         }
+        #qrcode {
+            margin: 2rem auto 1rem auto;
+            width: 128px;
+            height: 128px;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #qrcode > div {
+            padding: 0 !important;
+        }
+        #qrcode img {
+            border-radius: 0;
+            box-shadow: none;
+        }
     </style>
 </head>
 <body class="p-4 sm:p-6 md:p-8">
@@ -116,6 +133,7 @@
         </div>
 
         <footer class="text-center mt-12 text-gray-500 text-sm text-lowercase">
+            <div id="qrcode"></div>
             <p>telegram: <a href="https://t.me/kstuz" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-200">@kstuz</a></p>
             <p>youtube: <a href="https://www.youtube.com/@kstuzmusic" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-200">@kstuzmusic</a></p>
         </footer>
@@ -144,6 +162,18 @@
                 star.style.opacity = opacity;
 
                 starContainer.appendChild(star);
+            }
+
+            const qrcodeContainer = document.getElementById("qrcode");
+            if (qrcodeContainer) {
+                new QRCode(qrcodeContainer, {
+                    text: window.location.href,
+                    width: 128,
+                    height: 128,
+                    colorDark : "#e0e0e0",
+                    colorLight : "transparent",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
             }
         });
     </script>
